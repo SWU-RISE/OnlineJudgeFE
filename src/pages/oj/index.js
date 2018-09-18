@@ -38,7 +38,7 @@ Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
-Vue.config.productionTip = false
+ Vue.config.productionTip = false
 Vue.use(iView, {locale})
 Vue.use(VueI18n)
 

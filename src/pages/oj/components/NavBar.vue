@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
-      <div class="logo"><span>{{website.website_name}}</span></div>
+      <div class="logo"><span>RISE {{website.website_name}}</span></div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
         {{$t('m.Home')}}
@@ -18,7 +18,7 @@
         <Icon type="ios-pulse-strong"></Icon>
         {{$t('m.NavStatus')}}
       </Menu-item>
-      <Submenu name="">
+      <Submenu name="rank">
         <template slot="title">
           <Icon type="podium"></Icon>
           {{$t('m.Rank')}}
@@ -30,7 +30,7 @@
           {{$t('m.OI_Rank')}}
         </Menu-item>
       </Submenu>
-      <Submenu name="">
+      <Submenu name="about">
         <template slot="title">
           <Icon type="information-circled"></Icon>
           {{$t('m.About')}}
@@ -71,6 +71,10 @@
           </Dropdown-menu>
         </Dropdown>
       </template>
+       <Menu-item name="/exam">
+        <Icon type="book" />
+        {{$t('m.Exam')}}
+      </Menu-item>
     </Menu>
     <Modal v-model="modalVisible" :width="400">
       <div slot="header" class="modal-title">Welcome to {{website.website_name_shortcut}}</div>

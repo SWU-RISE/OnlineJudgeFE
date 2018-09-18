@@ -56,6 +56,7 @@ export const m = {
   Settings: 'Settings',
   Management: 'Management',
   Logout: 'Logout',
+  Exam: 'Exam',
   // announcements.vue
   Refresh: 'Refresh',
   Back: 'Back',
